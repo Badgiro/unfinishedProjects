@@ -1,0 +1,780 @@
+@font-face {
+  font-family: 'Stolzl';
+  src: url(../fonts/stolzl_regular.woff);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Stolzl';
+  src: url(../fonts/stolzl_bold.woff);
+  font-weight: 700;
+  font-style: bold;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Stolzl';
+  src: url(../fonts/Stolzl-Light.woff);
+  font-weight: 300;
+  font-style: light;
+  font-display: swap;
+}
+
+/*HEADER*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  font-family: 'Stolzl';
+  font-size: 14px;
+  font-weight: 300;
+
+  width: 1296px;
+}
+
+.header_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_nav {
+  display: inline-flex;
+}
+.head_menu-link {
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.head_menu-link:hover {
+  color: rgb(202, 13, 28);
+  transform: scale(1.2);
+}
+.header_contacts {
+  display: inline-flex;
+  align-items: center;
+}
+.header_phone-holder {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 40px;
+}
+.header_phone-logo {
+  margin-right: 20px;
+}
+.header_search-search {
+  background-color: rgb(221, 217, 217);
+}
+
+.header_mail-holder {
+  display: inline-flex;
+  align-items: center;
+}
+.header_mail-logo {
+  margin-right: 20px;
+}
+
+.header_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_form-loop {
+  border: 0px;
+}
+
+.header_button-tap {
+  width: 110px;
+  height: 41px;
+  background-color: #0063b0;
+  border-radius: 10px;
+  color: #fff;
+  border: #0063b0;
+  cursor: pointer;
+}
+.header_button-tap-ss {
+  text-decoration: none;
+}
+.header_button-tap:hover {
+  background-color: rgb(0, 140, 255);
+}
+
+.header_search-form {
+  display: flex;
+  align-items: center;
+}
+.header_search-search {
+  width: 596px;
+  height: 41px;
+  border: 1px;
+  border-radius: 10px, 0, 0, 10px;
+  opacity: 50%;
+}
+.header_trash {
+  display: flex;
+  align-items: center;
+}
+.header_trash-logo {
+  margin-right: 20px;
+}
+
+.header_liked {
+  display: flex;
+  align-items: center;
+}
+.header_liked-logo {
+  margin-right: 20px;
+}
+
+/*-------------КОРЗИНА*/
+
+.trash {
+  background-color: #fff;
+  border: 0px;
+  transition: 0.1s;
+  cursor: pointer;
+  position: fixed; /* Фиксированное расположение */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  padding: 15px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.trash:hover {
+  transform: scale(1.1);
+}
+
+.trash_num {
+  position: absolute;
+  background-color: #d62240;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  top: -5px;
+  right: -5px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.33); /* Небольшое затемнение на фоне */
+  z-index: 1000; /* Поверх всех окон */
+  width: 100%;
+  height: 100%;
+  display: none; /* По умолчанию скрываем окно */
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  overflow-y: scroll;
+}
+
+/* Стилизация контейнера окна */
+.popup__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Распределяем элементы внутри равномерно */
+  width: 100%;
+  max-width: 800px;
+  min-height: 300px;
+  background-color: #fff;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: relative;
+}
+
+/* Элементы окна (заголовок, список товаров, вывод стоимости) */
+.popup__item {
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+}
+
+.popup__item:last-of-type {
+  border-bottom: none;
+}
+
+.popup__title {
+  font-size: 20px;
+}
+
+/* Стили для вывода товара */
+.popup__product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.popup__product-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.popup__product-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.popup__product-title {
+  max-width: 300px;
+  font-weight: 500;
+}
+
+.popup__product-price {
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+/* Стили для кнопки удаления товара */
+.popup__product-delete {
+  font-size: 12px;
+  padding: 5px;
+  cursor: pointer;
+  color: #d62240;
+}
+
+/* Стили для вывода стоимости товаров */
+.popup__cost {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+.popup__cost-title {
+  margin-right: 15px;
+  font-size: 20px;
+  color: #364364;
+  text-align: right;
+}
+
+.popup__cost-value {
+  font-size: 20px;
+}
+
+/* Стили для кнопки закрытия окна */
+.popup__close {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  color: rgba(54, 67, 100, 0.7);
+  font-size: 20px;
+}
+
+.popup__close:hover {
+  color: rgb(54, 67, 100);
+}
+
+.popup--open {
+  display: flex;
+}
+
+/*SLIDER*/
+
+.slider {
+  margin-top: 40px;
+}
+
+.slider_holder {
+  background: linear-gradient(to right, #aaadb2, #c8c9cb);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.slider_list {
+  width: 400px;
+  padding-left: 50px;
+}
+.slider_list-head {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.slider_list_elements {
+  display: flex;
+  align-items: flex-end;
+}
+.slider_list_element-icon {
+  margin-right: 20px;
+}
+.slider_list_element {
+  margin-top: 20px;
+  color: #fff;
+}
+.slider_image {
+  padding-right: 100px;
+}
+
+.slider_button {
+  margin-top: 40px;
+}
+
+.slider_button-tap {
+  width: 110px;
+  height: 41px;
+  background-color: #0063b0;
+  border-radius: 10px;
+  color: #fff;
+  border: #0063b0;
+  cursor: pointer;
+}
+.slider_button-tap:hover {
+  background-color: rgb(0, 140, 255);
+}
+
+/*COMPANYS*/
+
+.companys {
+  margin-top: 120px;
+}
+
+.companys_holder {
+  display: flex;
+  align-items: flex-start;
+}
+
+.companys_all {
+  display: flex;
+  align-items: center;
+}
+.companys_brands {
+  margin-right: 20px;
+  font-size: 24px;
+  align-self: flex-start;
+}
+.companys_icon {
+  transition: 0.3s; /* Время эффекта */
+}
+
+#company_icon-id {
+  background-color: #fff;
+}
+#company_icon-btn {
+  background-color: #fff;
+}
+.companys_icon:hover {
+  transform: scale(1.2); /* Увеличиваем масштаб */
+}
+#company_icon-btn {
+  border: 0px;
+  cursor: pointer;
+}
+.company_partners-link {
+  transition: 0.3s;
+}
+.company_partners-link:hover {
+  transform: scale(1.2);
+}
+.companys_right-holder {
+  display: hidden;
+  opacity: 0;
+  width: 1px;
+}
+.companys_right-holder.open {
+  transition: opacity 0.8s, visibility 0.8s;
+  display: block;
+  opacity: 1;
+}
+.companys_upper-wrappers {
+  display: flex;
+}
+
+.companys_down-wrapper {
+  display: flex;
+}
+
+/*КАРТОЧКИ*/
+
+.carts {
+  margin: 120px 0 0 0;
+}
+.cart_implantology {
+  background-color: #f98c23;
+  height: 500px;
+  color: #fff;
+  width: 306px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.cart_head {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 21px;
+}
+li {
+  margin-top: 20px;
+}
+
+.cart-button {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  position: absolute;
+  width: 170px;
+}
+
+.cart_button-tap {
+  width: 170px;
+  height: 41px;
+  background-color: #0063b0;
+  border-radius: 10px;
+  color: #fff;
+  border: #0063b0;
+  cursor: pointer;
+}
+.cart_button-tap:hover {
+  background-color: rgb(0, 140, 255);
+  transition: 0.5s;
+}
+.cart_button-tap:active {
+  background-color: aquamarine;
+}
+
+.carts_upper {
+  display: flex;
+  justify-content: space-between;
+}
+.cart_link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cart_hirurgy {
+  position: relative;
+  background-color: #ae8eb5;
+  height: 500px;
+  color: #fff;
+  width: 306px;
+  border-radius: 10px;
+}
+
+.cart_paradontology {
+  position: relative;
+  background-color: #e74f4e;
+  height: 500px;
+  color: #fff;
+  width: 306px;
+  border-radius: 10px;
+}
+.cart_ortopedy {
+  position: relative;
+  background-color: #91b450;
+  height: 500px;
+  color: #fff;
+  width: 306px;
+  border-radius: 10px;
+}
+.carts_lower {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.cart_therapy-and-diagnostic {
+  position: relative;
+  background-color: #efb434;
+  height: 500px;
+  color: #fff;
+  width: 306px;
+  border-radius: 10px;
+}
+
+.cart_ortodonty {
+  position: relative;
+  background-color: #0090b5;
+  height: 500px;
+  color: #fff;
+  width: 306px;
+  border-radius: 10px;
+}
+.cart_consumables {
+  position: relative;
+  background-color: #8467ca;
+  height: 500px;
+  color: #fff;
+  width: 306px;
+  border-radius: 10px;
+}
+.cart_all-items {
+  position: relative;
+  background-color: #c39440;
+  height: 500px;
+  color: #fff;
+  width: 306px;
+  border-radius: 10px;
+}
+/* Популярные товары*/
+.popular_products {
+  margin-top: 120px;
+}
+.popular_products-upper {
+  display: flex;
+  align-items: flex-end;
+}
+.pop_pr-head {
+  font-size: 32px;
+  margin-right: 25px;
+}
+.pop_pr-icon {
+  transition: 0.3s;
+}
+.pop_pr-icon:hover {
+  transform: scale(1.2);
+}
+.popular_products-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 90px 0 0 0;
+}
+.pop_prod_cart {
+  border: 1px solid gainsboro;
+  width: 306px;
+  height: 404px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.pop_prod_cart:hover {
+  transform: scale(1.05);
+}
+
+.pop_prod-name {
+  margin: 20px 0 0 20px;
+  font-size: 14px;
+}
+.pop_prod-price {
+  margin: 20px 0 0 20px;
+  font-size: 24px;
+}
+
+.product_cart:hover {
+  background-color: rgb(0, 140, 255);
+  transition: 0.5s;
+}
+.product_cart:active {
+  background-color: aquamarine;
+}
+.product_cart {
+  margin: 15px 0 15px 20px;
+  width: 170px;
+  height: 41px;
+  background-color: #0063b0;
+  border-radius: 10px;
+  color: #fff;
+  border: #0063b0;
+  cursor: pointer;
+}
+.product_cart-bottom {
+  border-top: 1px solid gainsboro;
+  margin-top: 50px;
+}
+
+/*about блок*/
+
+.about {
+  margin: 120px 0 0 0;
+}
+
+.about_holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about_left-side {
+  font-weight: 400;
+  font-size: 16px;
+}
+.about_right-side {
+  text-align: center;
+}
+
+.about_button {
+  margin: 15px 0 15px 20px;
+  width: 216px;
+  height: 41px;
+  background-color: #0063b0;
+  border-radius: 10px;
+  color: #fff;
+  border: #0063b0;
+  cursor: pointer;
+}
+.about_button:hover {
+  background-color: rgb(0, 140, 255);
+  transition: 0.5s;
+}
+.about_button:active {
+  background-color: aquamarine;
+}
+
+/*Новинки*/
+
+.new_products {
+  margin-top: 120px;
+}
+
+.new_prods-upper {
+  display: flex;
+  align-items: flex-end;
+}
+.new_prods-head {
+  font-size: 32px;
+  margin-right: 25px;
+}
+.new_prods_logo {
+  transition: 0.3s;
+}
+.new_prods_logo:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.new_prods-lower {
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Футер*/
+
+footer {
+  margin-top: 120px;
+}
+.footer_holder {
+  border-top: 1px solid gainsboro;
+}
+.footer_upper {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_list {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #e74f4e;
+}
+
+.footer_contacts-item {
+  display: flex;
+}
+.footer_contacts-logo {
+  margin-right: 5px;
+}
+
+.footer_lower {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid gainsboro;
+  padding: 20px 0 20px 0;
+}
+
+/*Страница Каталога*/
+
+.pages_map {
+  margin-top: 60px;
+}
+.container {
+}
+.map_holder {
+  display: flex;
+}
+.map_main {
+  margin-right: 10px;
+}
+.map_icon {
+  margin-right: 10px;
+}
+
+.catalog_list {
+  margin-top: 40px;
+}
+
+.list_header {
+  display: flex;
+  align-items: flex-end;
+}
+.list_head {
+  font-weight: 400;
+  font-size: 32px;
+  margin-right: 10px;
+}
+.list_categorys {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+#list_item {
+  width: 306px;
+  height: 393px;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+}
+
+.list_implantology {
+}
+.list_item-img {
+  margin-left: 5px;
+}
+.list_item-name {
+  font-weight: 400;
+  font-size: 21px;
+  margin: 20px 0 35px 20px;
+}
+.list_item-button {
+  margin: 20px 0 35px 20px;
+}
+.list_item-button-tap {
+  width: 216px;
+  height: 41px;
+  background-color: #0063b0;
+  border-radius: 10px;
+  color: #fff;
+  border: #0063b0;
+  cursor: pointer;
+}
+.list_item-button-tap:hover {
+  background-color: rgb(0, 140, 255);
+  transition: 0.5s;
+}
+.list_item-button-tap:active {
+  background-color: aquamarine;
+}
+.list_hirurgy {
+}
+.list_paradontology {
+}
+.list_ortopedy {
+}
+.list_therapy-and-diagnostick {
+  margin-top: 15px;
+}
+.list_ortodonty {
+  margin-top: 15px;
+}
+.list_consumables {
+  margin-top: 15px;
+}

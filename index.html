@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css"></link>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Шапка-->
+    <header class="header">
+        <div class="container">
+            <div class="header_maxHolder">
+                <div class="header_top">
+                    
+                        <div class="header_nav">
+                             <menu class="nav_item"><a class="head_menu-link" href="#">О компании</a></menu>
+                            <menu class="nav_item"><a class="head_menu-link"  href="#">Новости</a></menu>
+                            <menu class="nav_item"><a class="head_menu-link" href="#">Статьи</a></menu>
+                            <menu class="nav_item"><a class="head_menu-link" href="#">Контакты</a></menu>
+                        </div>
+                        <div class="header_contacts">
+                            <div class="header_phone-holder">
+                            <div class="header_phone-logo"><img src="img/phone-icon.png" alt="#"></div>
+                            <div class="header_phone-number">+7 (495) 933-6147</div>
+                            
+                            </div>
+                            <div class="header_mail-holder">
+                                <div class="header_mail-logo"><img src="img/mail-icon (1).png" alt=""></div>
+                                <div class="header_mail-email">max@maximum.su</div>
+                            </div>
+                    </div>
+                    
+                </div>
+                <div class="header_bottom">
+                    <div class="header_logo"><img src="img/logo.jpg" alt="#"></div>
+                    <div class="header_button"><a class="header_button-tap-ss" href="catalog.html"><button class="header_button-tap">Каталог</button></a></div>
+                    <div class="header_search"><form action="#" class="header_search-form">
+                        <input type="text" value="    Поиск по сайту" class="header_search-search">
+                        <input type="image" src="img/header_search-icon.png"  alt="Submit" class="header_form-loop" />
+                    </form></div>
+                    <!--Корзина-->
+
+
+                    <div class="header_trash">
+                       <button class="trash" id="trash">
+                        <img class="trash_image" src="img/trash_icon.png" alt="#">
+                        <div class="trash_num" id="trash_num">0</div>
+                       </button>
+                        
+                    </div>
+                        
+                        <div class="header_liked">
+                            <div class="header_liked-logo"><img src="img/like-icon.png" alt="heart"></div>
+                            <div class="header_liked-qty">0</div>
+                        </div>
+                </div>
+
+                <!--ПОПАП КОРЗИНА-->>
+                <div class="popup">
+                    <div class="popup__container" id="popup_container">
+                      <div class="popup__item">
+                        <h1 class="popup__title">Оформление заказа</h1>
+                      </div>
+                      <div class="popup__item" id="popup_product_list">
+                        <div class="popup__product">
+                          <div class="popup__product-wrap">
+                            <img
+                              src="img/product-card__img.png"
+                              alt="none"
+                              class="popup__product-image"
+                            />
+                            <h2 class="popup__product-title">
+                                Иглодержатель Криля-Вуда
+                            </h2>
+                          </div>
+                          <div class="popup__product-wrap">
+                            <div class="popup__product-price">3600</div>
+                            <button class="popup__product-delete" data-id="popap_deleter">✖</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup__item">
+                        <div class="popup__cost">
+                          <h2 class="popup__cost-title">Итого</h2>
+                          <output class="popup__cost-value" id="popup_cost">3600</output>
+                        </div>
+            
+                      </div>
+                      <button class="popup__close" id="popup_close">✖</button>
+                    </div>
+                  </div>
+            
+        </div>
+        </div>
+    </header>
+    <!--Сдайдер-->
+    <div class="slider">
+        <div class="container">
+            <div class="slider_holder">
+                <div class="slider_list">
+                    <div class="slider_list-head">
+                        Ut viverra viverra phasellus id in eleifend.
+                    </div>
+                    <div class="slider_list-olist">
+                        <div class="slider_list_elements">
+                            <div class="slider_list_element-icon"><img src="img/slider-icon.png" alt="#"></div>
+                            <div class="slider_list_element"> Ut viverra viverra phasellus id in eleifend.</div>
+                        </div>
+                        <div class="slider_list_elements">
+                            <div class="slider_list_element-icon"><img src="img/slider-icon.png" alt="#"></div>
+                            <div class="slider_list_element"> Ut viverra viverra phasellus id in eleifend.</div>
+                        </div>
+                        <div class="slider_list_elements">
+                            <div class="slider_list_element-icon"><img src="img/slider-icon.png" alt="#"></div>
+                            <div class="slider_list_element"> Ut viverra viverra phasellus id in eleifend.</div>
+                        </div>
+
+                        <div class="slider_button"><a class="slider_button-tap-ss" href="#"></a><button class="slider_button-tap">Каталог</button></a></div>
+                       
+                        
+                </div>
+            </div>
+            <div class="slider_image"><img src="img/slider.png" alt="#"></div>
+        </div>
+    </div>
+    <!--Партнеры-->
+<div class="companys">
+    <div class="container">
+        <div class="companys_holder" >
+            <div class="companys_all">
+                <div class="companys_brands">
+                    Все бренды
+                </div>
+                <div class="companys_icon"><a href="#"><button id="company_icon-btn"><img src="img/companys-icon.png" id="company_icon-id" alt="#"></button></a></div>
+            </div>
+            <div id="companyId" class="companys_right-holder">
+                <div class="companys_upper-wrappers">
+                    <div class="company_first-up"><a class="company_partners-link" href=""><img src="img/1-st-companys-up.png" alt=""></a></div>
+                    <div class="company_second-up"><a class="company_partners-link" href=""><img src="img/2-nd-companys-up.png" alt=""></a></div>
+                    <div class="company_third-up"><a class="company_partners-link" href=""><img src="img/3-rd-companys-up.png" alt=""></a></div>
+                </div>
+                <div class="companys_down-wrapper">
+                    <div class="company_first-up"><a class="company_partners-link" href=""><img src="img/1-st-companys-down.png" alt=""></a></div>
+                        <div class="company_second-up"><a class="company_partners-link" href=""><img src="img/2-nd-companys-down.png" alt=""></a></div>
+                        <div class="company_third-up"><a class="company_partners-link" href=""><img src="img/3-rd-companys-down.png" alt=""></a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="carts">
+    <div class="container">
+        <div class="carts_holder">
+            <div class="carts_upper">
+            <div class="cart_implantology">
+                <div class="cart_list">
+                    <div class="cart_head">
+                        <a href="#" class="cart_link">Имплантология</a>
+                    </div>
+                    <ul>
+                        <li>Набор для фиксации костных блоков</li>
+                        <li>Биоматериалы</li>
+                        <li>Инструменты для работы с биоматериалами</li>
+                        <li>Ронжиры</li>
+                        <li>Костные мельницы</li>
+                        <li>Ножницы</li>
+                        <li>Чашки для костного <br> материала</li>
+                    </ul>
+                    <div class="cart-button" id="implantology-btn"><a class="cart-button-ss" href="#"></a><button class="cart_button-tap">Посмотреть все</button></a></div>
+                </div>
+            </div>
+            <div class="cart_hirurgy">
+                <div class="cart_list">
+                    <div class="cart_head">
+                       <a href="#" class="cart_link">Хирургия</a> 
+                    </div>
+                    <ul>
+                        <li>Элеваторы и люксаторы</li>
+                        <li>Периотомы</li>
+                        <li>Пинцеты</li>
+                        <li>Распаторы</li>
+                        <li>Иглодержатели</li>
+                        <li>Ножницы</li>
+                        <li>Лезвия и рукоятки для <br>лезвий</li>
+                    </ul>
+                    <div class="cart-button" id="hirurgy-btn"><a class="cart-button-ss" href="#"></a><button class="cart_button-tap">Посмотреть все</button></a></div>
+                </div>
+            </div>
+            <div class="cart_paradontology">
+                <div class="cart_list">
+                    <div class="cart_head">
+                        <a href="#" class="cart_link">Пародонтология</a>
+                    </div>
+                    <ul>
+                        <li>Кюреты Грейси</li>
+                        <li>Скалеры</li>
+                        <li>Зонды пародонтологические</li>
+                       
+                       
+                    </ul>
+                    <div class="cart-button" id="paradontology-btn"><a class="cart-button-ss" href="#"></a><button class="cart_button-tap">Посмотреть все</button></a></div>
+                </div>
+            </div>
+            <div class="cart_ortopedy">
+                <div class="cart_list">
+                    <div class="cart_head">
+                        <a href="#" class="cart_link">Ортопедия</a>
+                    </div>
+                    <ul>
+                        <li>Набор для снятия коронок</li>
+                        <li>Коронкосниматели</li>
+                        <li>Эмалевые ножи</li>
+                        <li>Зеркала для <br> фотографирования</li>
+                        <li>Динамометрические ключи и отвертки</li>
+                        <li>Контрастеры</li>
+                       
+                        
+                    </ul>
+                    
+                </div>
+                <div class="cart-button" id="ortopedy-btn"><a class="cart-button-ss" href="#"></a><button class="cart_button-tap">Посмотреть все</button></a></div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="carts_lower">
+            <div class="cart_therapy-and-diagnostic">
+                <div class="cart_list">
+                    <div class="cart_head">
+                        <a href="#" class="cart_link">Терапия и <br> диагностика</a>
+                    </div>
+                    <ul>
+                        <li>Зеркала, микрозеркала <br> и рукоятки</li>
+                        <li>Щипцы для извлечения <br> сломанных инструментов из каналов</li>
+                        <li>Инструменты для работы с биоматериалами</li>
+                        <li>Инструменты для композитов</li>
+                        <li>Держатель файлов</li>
+                        <li>Пинцеты</li>
+                        
+                    </ul>
+                    <div class="cart-button" ><a class="cart-button-ss" href="#"></a><button class="cart_button-tap">Посмотреть все</button></a></div>
+                </div>
+            </div>
+            <div class="cart_ortodonty">
+                <div class="cart_list">
+                    <div class="cart_head">
+                       <a href="#" class="cart_link">Ортодонтия</a> 
+                    </div>
+                    <ul>
+                        <li>Набор для фиксации костных блоков</li>
+                        <li>Биоматериалы</li>
+                        <li>Инструменты для работы с биоматериалами</li>
+                        <li>Ронжиры</li>
+                        <li>Костные мельницы</li>
+                        <li>Чашки для костного материала</li>
+                        
+                    </ul>
+                    <div class="cart-button" ><a class="cart-button-ss" href="#"></a><button class="cart_button-tap">Посмотреть все</button></a></div>
+                </div>
+            </div>
+            <div class="cart_consumables">
+                <div class="cart_list">
+                    <div class="cart_head">
+                        <a href="#" class="cart_link">Расходные материалы</a>
+                    </div>
+                    <ul>
+                        <li>Аспираторы, адаптеры</li>
+                        <li>Ирригационные системы</li>
+                        <li>Шовный материал</li>
+                        <li>Биоматериалы</li>
+                        <li>Стерильные комплекты для хирургии</li>
+                        <li>Лезвия для скальпелей</li>
+                       
+                       
+                    </ul>
+                    <div class="cart-button" id="paradontology-btn"><a class="cart-button-ss" href="#"></a><button class="cart_button-tap">Посмотреть все</button></a></div>
+                </div>
+            </div>
+            <div class="cart_all-items">
+                <div class="cart_list">
+                    <div class="cart_head">
+                        <a href="#" class="cart_link">Весь каталог</a>
+                    </div>
+                 
+                    
+                </div>
+                <div class="cart-button" id="ortopedy-btn"><a class="cart-button-ss" href="#"></a><button class="cart_button-tap">Посмотреть все</button></a></div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="popular_products">
+    <div class="container">
+        <div class="popular_products_holder">
+            <div class="popular_products-upper">
+                <div class="pop_pr-head">Популярные товары </div>
+                <div class="pop_pr-icon"><a href="#"><img id="pop_pr-img" src="img/companys-icon.png" alt=""></a></div>
+            </div>
+            <div class="popular_products-bottom">
+                <div class="pop_prod_cart">
+                    <div class="product_cart-top">
+                        <div class="pop_prod-img"><a class="pop_prod-img-link" href="#">
+                            <img src="img/product-card__img.png" alt="#">
+                        </a></div>
+                    </div>
+                    <div class=" product_cart-bottom" >
+                    <div class="pop_prod-name"><a class="pop_prod-title-link" href="">Иглодержатель Криля-Вуда</a></div>
+                    <div class="pop_prod-price">3600Р</div>
+                    <button class="product_cart">В корзину</button>
+                </div>
+                </div>
+                <div class="pop_prod_cart">
+                    <div class="product_cart-top">
+                        <div class="pop_prod-img"><a class="pop_prod-img-link" href="#">
+                            <img src="img/product-card__img.png" alt="#">
+                        </a></div>
+                    </div>
+                    <div class=" product_cart-bottom" >
+                    <div class="pop_prod-name"><a class="pop_prod-title-link" href="">Иглодержатель Криля-Вуда</a></div>
+                    <div class="pop_prod-price">3600Р</div>
+                    <button class="product_cart">В корзину</button>
+                </div>
+                </div>
+                <div class="pop_prod_cart">
+                    <div class="product_cart-top">
+                        <div class="pop_prod-img"><a class="pop_prod-img-link" href="#">
+                            <img src="img/product-card__img.png" alt="#">
+                        </a></div>
+                    </div>
+                    <div class=" product_cart-bottom" >
+                    <div class="pop_prod-name"><a class="pop_prod-title-link" href="">Иглодержатель Криля-Вуда</a></div>
+                    <div class="pop_prod-price">3600Р</div>
+                    <button class="product_cart">В корзину</button>
+                </div>
+                </div>
+                <div class="pop_prod_cart">
+                    <div class="product_cart-top">
+                        <div class="pop_prod-img"><a class="pop_prod-img-link" href="#">
+                            <img src="img/product-card__img.png" alt="#">
+                        </a></div>
+                    </div>
+                    <div class=" product_cart-bottom" >
+                    <div class="pop_prod-name"><a class="pop_prod-title-link" href="">Иглодержатель Криля-Вуда</a></div>
+                    <div class="pop_prod-price">3600Р</div>
+                    <button class="product_cart">В корзину</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about">
+    <div class="container">
+        <div class="about_holder">
+            <div class="about_left-side">
+                Компания "Медтех" - это лидер в области производства и продажи медицинского <br> оборудования. Мы работаем на рынке более 10 лет
+                 и предлагаем широкий <br> ассортимент продукции высокого качества <br><br>
+                Наша компания специализируется на медицинском оборудовании для различных <br> областей медицины, таких как хирургия, реабилитация, диагностика и терапия. <br>
+                В нашем каталоге товаров представлены инновационные решения для различных <br> сфер медицинской деятельности. <br><br>
+                Мы работаем только с проверенными и надежными производителями, которые <br> гарантируют качество своей продукции.
+                Кроме того, мы контролируем каждый этап <br> производства и поставки оборудования, чтобы нашим клиентам было предоставлено <br> только лучшее. <br> <br>
+
+                Компания "Медтех" заботится о своих клиентах, поэтому мы предлагаем не только <br> качественное оборудование, но и квалифицированную
+                консультацию и помощь в <br> выборе необходимой продукции.
+            </div>
+            <div class="about_right-side">
+                <div class="about_img"><img src="img/about_catalog-image.png" alt=""></div>
+                <div class="about_button-holder"><button class="about_button">Скачать каталог (pdf)</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="new_products">
+    <div class="container">
+        <div class="new_products_holder">
+            <div class="new_prods-upper">
+                <div class="new_prods-head">Новинки</div>
+                <div class="new_prods_logo"><a href="#"><img src="img/companys-icon.png" alt="#"></a></div>
+            </div>
+            <div class="new_prods-lower">
+                <div class="pop_prod_cart">
+                    <div class="product_cart-top">
+                        <div class="pop_prod-img"><a class="pop_prod-img-link" href="#">
+                            <img src="img/product-card__img.png" alt="#">
+                        </a></div>
+                    </div>
+                    <div class=" product_cart-bottom" >
+                    <div class="pop_prod-name"><a class="pop_prod-title-link" href="">Иглодержатель Криля-Вуда</a></div>
+                    <div class="pop_prod-price">3600Р</div>
+                    <button class="product_cart" id="f228772">В корзину</button>
+                </div>
+                </div>
+                <div class="pop_prod_cart">
+                    <div class="product_cart-top">
+                        <div class="pop_prod-img"><a class="pop_prod-img-link" href="#">
+                            <img src="img/product-card__img.png" alt="#">
+                        </a></div>
+                    </div>
+                <div class=" product_cart-bottom" >
+                    <div class="pop_prod-name"><a class="pop_prod-title-link" href="">Иглодержатель Криля-Вуда</a></div>
+                    <div class="pop_prod-price">3600Р</div>
+                    <button class="product_cart add" data-id="f228772">В корзину</button>
+                </div>
+                </div>
+                <div class="pop_prod_cart">
+                    <div class="product_cart-top">
+                        <div class="pop_prod-img"><a class="pop_prod-img-link" href="#">
+                            <img src="img/для хирургии.jpg" alt="#">
+                        </a></div>
+                    </div>
+                    <div class=" product_cart-bottom" >
+                    <div class="pop_prod-name"><a class="pop_prod-title-link" href="">Иглодержатель Криля-Вуда</a></div>
+                    <div class="pop_prod-price">3600Р</div>
+                    <button class="product_cart add" data-id="ftp292">В корзину</button>
+                </div>
+                </div>
+                <div class="pop_prod_cart">
+                    <div class="product_cart-top">
+                        <div class="pop_prod-img"><a class="pop_prod-img-link" href="#">
+                            <img src="img/product-card__img.png" alt="#">
+                        </a></div>
+                    </div>
+                    <div class=" product_cart-bottom" >
+                    <div class="pop_prod-name"><a class="pop_prod-title-link" href="">Иглодержатель Криля-Вуда</a></div>
+                    <div class="pop_prod-price">3600Р</div>
+                    <button class="product_cart">В корзину</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer_holder">
+            <div class="footer_upper">
+                <div class="footer_logo"><img src="img/footer__logo.png" alt="#"></div>
+                <div class="footer_about-company">
+                    <ul class="footer_list">
+                    <figcaption>О компании</figcaption>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Статьи</a></li>
+                </ul></div>
+                <div class="footer_popular">
+                    <ul class="footer_list">
+                        <figcaption>Популярные категории</figcaption>
+                        <li><a href="#">Имплантология</a></li>
+                        <li><a href="#">Хирургия</a></li>
+                        <li><a href="#">Пародонтология</a></li>
+                        <li><a href="#">Ортопедия</a></li>
+                        <li><a href="#">Терапия и диагностика</a></li>
+                        <li><a href="#">Ортодонтия</a></li>
+                        <li><a href="#">Расходные материалы</a></li>
+                        <li><a href="#">Оборудование</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer_contacts">
+                    <ul class="footer_list">
+                        <figcaption>Контакты</figcaption>
+                        <li><div class="footer_contacts-item">
+                            <div class="footer_contacts-logo"><img src="img/location-icon.png" alt="#"></div>
+                            <div class="footer_contacts-desc">г. Москва, ул. Усачева, д. 62, стр. 1 офис 1</div>
+                        </div>
+                        </li>
+                        <li><div class="footer_contacts-item">
+                            <div class="footer_contacts-logo"><img src="img/phone-icon.png" alt=""></div>
+                            <div class="footer_contacts-desc">+7 (495) 933-6147</div>
+                        </div>
+                        </li>
+                        <li><div class="footer_contacts-item">
+                            <div class="footer_contacts-logo"><img src="img/mail-icon (1).png" alt=""></div>
+                            <div class="footer_contacts-desc">max@maximum.su</div>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_lower">
+                <div class="footer_allrights">2023 (с) Все права защищены</div>
+                <div class="footer_privacy_policy">Политика конфиденциальности</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
