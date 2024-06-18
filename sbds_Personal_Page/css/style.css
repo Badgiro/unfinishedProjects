@@ -1,0 +1,462 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
+  *, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  :focus, :active {
+    outline: none;
+  }
+  
+  a:focus, a:active {
+    outline: none;
+  }
+  
+  nav, footer, header, aside {
+    display: block;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  input, button, textarea {
+    font-family: inherit;
+  }
+  
+  input::-ms-clear {
+    display: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  
+  a, a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  img {
+    vertical-align: top;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+  
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    
+    
+}
+.container {
+    max-width: 944px;
+    margin: 0px auto;
+}
+.head {
+    font-family: 'Open Sans', sans-serif;
+
+}
+.head_menu {
+    display: flex;
+    text-align: center;
+    font-size: 18px; 
+    font-weight: 700;  
+    justify-content: space-between;
+}
+
+.head_button-home {
+    background-color: transparent;
+    height: 20px;
+    font-size: 18px;    
+}
+.button {
+    background-color: transparent;
+    height: 20px;
+    font-size: 18px;
+}
+.button:hover {
+    color: #828282;
+    
+}
+
+.head_underline {
+    margin-top: 35px;
+    height: 1px;
+    background-color: #828282;
+}
+.head_presentation {
+   
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 0 0;
+    position: relative;
+}
+.head_name {
+    font-size: 40px;
+    font-style: 700;
+
+}
+
+.head_prof {
+    position: absolute;
+    bottom: 3px;
+    left: 410px;
+    font-size: 18px;
+}
+
+.head_language {
+    transform: rotate(-90deg);
+    font-style: bold;
+    font-size: 16px;
+   
+    position: absolute;
+    bottom: 32px;
+    left: 897px;
+    width: 75px;
+
+}
+.head_language-ru {
+    color: #828282;
+}
+
+.head_guy {
+    margin: 49px 0 105px 0;
+}
+
+.about {
+  background-color: #F6F6F6;
+}
+
+.about_holder {
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 400px;
+    padding-bottom: 107px;
+}
+
+.about_desc{
+    
+    height: 300px;
+    width: 490px;
+    
+    
+}
+.about_head {
+    margin: 50px 0 30px 0;
+    font-size: 34px;
+    font-style: 700;
+    
+}
+.about_info {
+font-size: 18px;
+
+}
+
+
+.skills {
+  margin-top:91px ;
+  margin-bottom: 110px;
+
+}
+.skills_holder {
+  text-align: center;
+}
+.skills_head {
+
+  font-size: 34px;
+  font-style: bold;
+
+}
+.skills_desc {
+  font-size: 18px;
+  font-style: normal;
+  margin-top: 70px;
+}
+.skills_programs {
+  display: flex;
+  margin-top: 70px;
+  justify-content: space-around;
+}
+
+.skills_photoshop-desc {
+color: #828282;
+margin-top: 23px;
+}
+.skills_photoshop-stars{
+  margin-top: 41px;
+
+}
+
+.skills_ilustrator-desc{
+  color: #828282;
+margin-top: 23px;
+}
+.skills_ilustrator-stars{
+   margin-top: 41px;
+}
+
+.skills_after-affects-desc{
+  color: #828282;
+margin-top: 23px;
+}
+.skills_after-affects-stars{
+   margin-top: 41px;
+}
+
+.skills_figma-desc {
+  color: #828282;
+margin-top: 23px;
+}
+.skills_figma-stars{
+   margin-top: 41px;
+}
+
+.portfolio{
+ background-color: #F6F6F6;
+}
+.portfolio_holder{
+text-align: center;
+width: 100%;
+}
+.portfolio_head {
+  font-size: 34px;
+  font-style: bold;
+  padding: 110px 0 55px 0;
+}
+.portfolio_fashion-page {
+  font-size: 18px;
+  text-decoration-line: underline;
+  padding: 44px 0 100px
+}
+.portfolio_reebok-page {
+  font-size: 18px;
+  text-decoration-line: underline;
+  padding: 44px 0 100px
+}
+.portfolio_braun-page{
+  font-size: 18px;
+  text-decoration-line: underline;
+  padding: 44px 0 100px
+}
+
+.contacts {
+  margin-top: 115px;
+  padding-bottom: 100px;
+}
+.contacts_holder {
+  text-align: center;
+  
+}
+.contacts_head {
+  font-size: 34px;
+  font-style: bold;
+  
+    
+}
+.contacts_desc {
+  font-size: 18px;
+  margin-top: 25px;
+}
+.contacts_button {
+ margin-top: 30px;
+ 
+}
+.sending_button {
+  color:#fff;
+  width: 180px;
+  height: 42px;
+  background-color: black;
+  border-radius: 20px;
+}
+.contacts_social-pages {
+  display: inline-flex;
+ margin-top: 60px;
+  justify-content: space-between;
+ 
+}
+.contacts_in {
+  margin-right: 50px;
+
+}
+.contacts_instagram{
+  margin-right: 50px;
+
+}
+.contacts_be {
+  margin-right: 50px;
+}
+
+.contacts_likes {
+  margin-top: 45px;
+  font-size: 14px;
+  color:#828282;
+}
+
+.head_mobile-guy,
+.head_burger {
+  display: none;
+}
+
+/* Стили для подложки */
+
+.overlay {
+   
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 20;
+  transition: .3s all;
+}
+
+
+/* Стили для модальных окон */
+
+.modal {
+  
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+  
+  
+  /*  Установаем ширину окна  */
+  width: 100%;
+  max-width: 500px;
+  
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Должен быть выше чем у подложки*/
+  
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
+
+/* Стили для кнопки закрытия */
+
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+
+/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
+
+a {
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #414b52;
+  margin: 10px;
+  color: #fff;
+  border-radius: 3px;
+}
+
+
+@media (max-width: 375px) {
+    .container {
+     
+      margin: 0px auto;
+    }
+    .head_menu,
+    .head_underline,
+    .head_guy,
+    .head_language{
+      display: none;
+    }
+    .head_mobile-guy{
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+     
+    }
+    
+    .head_presentation {
+      margin-left: 29px;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+    }
+    .head_prof {
+      margin-top: 80px;
+      position:static;
+      margin-left: 0px;
+      padding-left: 0px;
+    }
+    .skills_programs {
+      display: block;
+    }
+    .img_mobile {
+      width: 100%;
+    }
+    .skills_mobile-m {
+      margin: 0 0 80px 0;
+    }
+
+    .head_burger-holder {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 100px;
+    }
+    .head_burger {
+      display:block;
+      
+    }
+    
+    .burger_menu {
+      display: none;
+    }
+    #burger {
+      margin-right: 50px;
+    }
+    
+
+}
